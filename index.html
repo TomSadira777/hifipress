@@ -353,6 +353,12 @@
       flex-wrap: wrap;
     }
 
+    /* Mobile-only line breaks */
+    .mobile-br { display: none; }
+    @media (max-width: 680px) {
+      .mobile-br { display: block; }
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 680px) {
       main { padding: 1.25rem 1rem 3rem; }
@@ -380,8 +386,6 @@
       .store-row-logos { gap: 6px; }
       .store-row-logos img { height: 38px; }
       .store-btn-text { height: 38px; font-size: 0.7rem; }
-
-      .book-cta { font-size: 1.1rem; }
     }
   </style>
 </head>
@@ -409,7 +413,7 @@
   <!-- HERO -->
   <p class="hero-title">Live High &amp; Prosper!</p>
   <p class="heading-h1">
-    For a limited time snatch <a href="/tjonr" style="color:#2e6b3e;font-style:italic;font-weight:700;">The Joint of No Return</a> for <span class="orig-price">$4.20</span> <strong>FREE</strong>
+    For a limited time snatch<br class="mobile-br"> <a href="/tjonr" style="color:#2e6b3e;font-style:italic;font-weight:700;">The Joint of No Return</a><br class="mobile-br"> for <span class="orig-price">$4.20</span> <strong>FREE</strong>
   </p>
   <p class="heading-h2">No signups, no hassle.🖖 Just click your fav ebook store below 👇</p>
 
@@ -624,6 +628,8 @@
       </div>
       <p class="book-cta"><strong>WHO DID IT? FIND OUT.</strong></p>
       <div class="store-section">
+        <div class="store-row">
+          <span class="store-row-label"><strong>Download for <em><span class="orig-price">$4.20</span></em></strong> from one of these fine ebookstores:</span>
           <div class="store-row-logos">
             <a href="https://www.amazon.com/gp/product/B0CTSZC653" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
             <a href="https://www.barnesandnoble.com/w/murder-on-the-pineapple-express-tom-sadira/1144780333?ean=2940185503096" target="_blank"><img src="images/nook.png" alt="Nook"></a>
@@ -675,43 +681,15 @@
 </footer>
 
 <script>
-  async function handleSubscribe() {
+  function handleSubscribe() {
     const input = document.getElementById('nl-email');
     if (!input.value || !input.value.includes('@')) {
       input.focus();
       input.style.borderColor = '#c00';
       return;
     }
-    const btn = document.querySelector('.newsletter-form button');
-    btn.disabled = true;
-    btn.textContent = 'Subscribing...';
-    try {
-      const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiYmU4ZGYzNTk4NjMxMjg3NTMzOWUyNDQ3YzMyNWI2ZWY4M2E5OWM4NjU1ZDFhNmI5Njc0MTU5NGUwZTk3NzNhZjEwOGFmNzUxODJjZDcwNWEiLCJpYXQiOjE3NzcwNzEwODIuMzY3NTU4LCJuYmYiOjE3NzcwNzEwODIuMzY3NTYxLCJleHAiOjQ5MzI3NDQ2ODIuMzU5Mzk2LCJzdWIiOiI4MzM2NzkiLCJzY29wZXMiOltdfQ.mmIemHSZA4tQ39DkTyvrk9bwUxztMPcsePMvCJV5u34V4SIhsKpbEqvCbknACvlkw57ry9LNXoxoeZA_8Jj7CqSGRIuWPgfZhd1xkt5r1GNv_MQC05jGiT2SxwXG2chSgcPIFrLHLYKOCu1Jvh2TSBzRFMLxviEO2uHJ181sJwsTgA8LAXv8cQlHnMZ6Csc3dA9X_GYyx_aetad-gNhP9d2CxscWvPDq7GDPXSc_xm0B4uWF4ig_IBPLkEtVv0I0hG_czUT8EroppBtiZF-zTiPyv9dpbfqV-wtZhszfC1wi__0al1ayDP2-vyyGomwAQKEn4hDPzuWnJmnfF2trtoeN_xKvmTZ5cyD0aFKpdxe2otKkl_NvCIPBHF0nNa2--3S6A2Nh28LhOl1vd1X8T_X1p4PQBr8V3uUJv_lQ4EdjnOsch3SWVDuudrA-CDZARpeVKdd8Ayuzy0K3QNtcHgamFRGsfZCc53_bbnzHShWaZdsvXtEdJP1l9sRKM05Rc5jHB6X0YRWBGmsq1TWweQdEc23_xqkf34frh7qcs4pfqhMLJ_1RZx_2f4CFYTQx_KNs-VYGk5bomQmZZ2INZlJO7ZcGv5n-yErLb7Eq0Qs_dXZg2t6PZ_fRtQ8KrXexoonb7Y7D0VrhD4n70tCmx44yp9dPh78kpll_yd4a6IM'
-        },
-        body: JSON.stringify({
-          email: input.value,
-          groups: ['112744497329210936']
-        })
-      });
-      if (res.ok || res.status === 201 || res.status === 200) {
-        input.style.display = 'none';
-        btn.style.display = 'none';
-        document.getElementById('newsletter-thanks').style.display = 'block';
-      } else {
-        btn.disabled = false;
-        btn.textContent = 'Subscribe';
-        alert('Something went wrong. Please try again.');
-      }
-    } catch(e) {
-      btn.disabled = false;
-      btn.textContent = 'Subscribe';
-      alert('Something went wrong. Please try again.');
-    }
+    const url = 'https://preview.mailerlite.io/forms/822312/185673931995219199/share?email=' + encodeURIComponent(input.value);
+    window.open(url, '_blank');
   }
 </script>
 
