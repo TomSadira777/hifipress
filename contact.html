@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact HIFI Press Books</title>
+  <meta name="description" content="Get in touch with HIFI Press Books, publisher of Tom Sadira's Far Out Chronicles series.">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fff;
+      color: #404040;
+      font-family: 'DM Sans', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+
+    .site-header {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 52px;
+    }
+
+    .nav-logo a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .nav-logo img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .nav-logo-text {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #404040;
+      white-space: nowrap;
+    }
+
+    .nav-links { list-style: none; display: flex; gap: 2rem; }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #404040;
+    }
+
+    .nav-links a:hover { color: #000; }
+
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 5rem;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #404040;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid #ccc;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: #404040;
+      outline: none;
+      border-radius: 2px;
+      transition: border-color 0.15s;
+    }
+
+    input:focus, textarea:focus { border-color: #404040; }
+
+    textarea { resize: vertical; min-height: 140px; }
+
+    button[type="submit"] {
+      align-self: flex-start;
+      padding: 0.7rem 2.2rem;
+      background: #404040;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover { background: #222; }
+    button[type="submit"]:disabled { opacity: 0.5; cursor: default; }
+
+    .form-success {
+      display: none;
+      padding: 1.25rem;
+      background: #f0f7f2;
+      border-left: 3px solid #2e6b3e;
+      font-size: 1rem;
+      color: #2e6b3e;
+      font-weight: 600;
+    }
+
+    footer {
+      border-top: 1px solid #e0e0e0;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      line-height: 2;
+    }
+
+    footer a { color: #888; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+
+    @media (max-width: 480px) {
+      main { padding: 2rem 1rem 3.5rem; }
+      button[type="submit"] { width: 100%; text-align: center; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="/">
+        <img src="./images/HIFI_v2.png" alt="HIFI Press Books logo">
+        <span class="nav-logo-text">HIFI Press Books</span>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Books</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <h1>Get in Touch</h1>
+  <p class="subtitle">Questions, feedback, or just want to say hi? We read everything.</p>
+
+  <div class="form-success" id="form-success">
+    Message sent! We'll get back to you soon. 🖖
+  </div>
+
+  <form class="contact-form" id="contact-form">
+    <label>
+      Name
+      <input type="text" name="name" placeholder="Your name" required>
+    </label>
+    <label>
+      Email
+      <input type="email" name="email" placeholder="your@email.com" required>
+    </label>
+    <label>
+      Message
+      <textarea name="message" placeholder="What's on your mind?" required></textarea>
+    </label>
+    <button type="submit" id="submit-btn">Send Message</button>
+  </form>
+</main>
+
+<footer>
+  <p>2025 HIFI Press LLC · Arizona, USA</p>
+  <nav class="footer-links">
+    <a href="/about">About</a>
+    <a href="/terms-of-service">Terms of Service</a>
+    <a href="/privacy-policy">Privacy Policy</a>
+  </nav>
+</footer>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    const data = {
+      name: this.name.value,
+      email: this.email.value,
+      message: this.message.value,
+      _subject: 'New message from hifipressbooks.com contact form',
+      _replyto: this.email.value
+    };
+
+    try {
+      const res = await fetch('https://formspree.io/f/telos777@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        this.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        alert('Something went wrong. Please try again or email us directly.');
+      }
+    } catch(err) {
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+      alert('Something went wrong. Please try again.');
+    }
+  });
+</script>
+
+</body>
+</html>

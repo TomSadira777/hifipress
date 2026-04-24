@@ -133,9 +133,9 @@
 
     /* Book title — green, bold, stands out */
     .book-title {
-      font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+      font-size: clamp(1.25rem, 2.8vw, 1.75rem);
       font-weight: 700;
-      line-height: 1.35;
+      line-height: 1.3;
       color: #2e6b3e;
       margin-bottom: 0.75rem;
     }
@@ -197,15 +197,14 @@
     /* ── STORE ROWS ── */
     .store-section {
       margin-top: 0.75rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid #ebebeb;
+      padding-top: 0.6rem;
     }
 
-    /* Label stacked above logos — cleaner on all screen sizes */
+    /* Label stacked above logos */
     .store-row {
       display: flex;
       flex-direction: column;
-      gap: 0.35rem;
+      gap: 0.4rem;
     }
 
     .store-row-label {
@@ -217,7 +216,7 @@
     .store-row-logos {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       flex-wrap: wrap;
     }
 
@@ -227,37 +226,37 @@
     }
 
     .store-row-logos img {
-      height: clamp(36px, 5vw, 44px);
+      height: clamp(40px, 5.5vw, 50px);
       width: auto;
       display: block;
-      border-radius: 4px;
+      border-radius: 5px;
     }
 
     .store-btn-text {
       display: inline-flex;
       align-items: center;
-      padding: 0 0.85rem;
-      border: 1px solid #404040;
-      border-radius: 4px;
-      font-size: 0.75rem;
+      padding: 0 1rem;
+      border: 1.5px solid #404040;
+      border-radius: 5px;
+      font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       text-decoration: none;
       color: #404040;
-      height: clamp(36px, 5vw, 44px);
+      height: clamp(40px, 5.5vw, 50px);
       white-space: nowrap;
     }
 
     .store-btn-text:hover { background: #f5f5f5; }
 
-    /* ── CTA ABOVE STORE ROWS ── */
+    /* ── CTA ABOVE STORE ROWS — same fluid trick as hero ── */
     .book-cta {
-      font-size: clamp(1.1rem, 3.5vw, 1.75rem);
+      font-size: clamp(1.5rem, 6vw, 2.2rem);
       font-weight: 700;
       color: #000;
-      margin-bottom: 0.25rem;
-      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      line-height: 1.15;
     }
 
     /* ── DIVIDERS ── */
@@ -377,9 +376,9 @@
       .book-blurb { font-size: 0.95rem; }
 
       .store-row-label { font-size: 0.85rem; }
-      .store-row-logos { gap: 5px; }
-      .store-row-logos img { height: 32px; }
-      .store-btn-text { height: 32px; font-size: 0.68rem; }
+      .store-row-logos { gap: 6px; }
+      .store-row-logos img { height: 38px; }
+      .store-btn-text { height: 38px; font-size: 0.7rem; }
 
       .book-cta { font-size: 1.1rem; }
     }
@@ -409,13 +408,10 @@
   <!-- HERO -->
   <p class="hero-title">Live High &amp; Prosper!</p>
   <p class="heading-h1">
-    For a limited time snatch <a href="/tjonr"><em><strong>The Joint of No Return</strong></em></a> for <span class="orig-price">$4.20</span> <strong>FREE</strong>
+    For a limited time snatch <a href="/tjonr" style="color:#2e6b3e;font-style:italic;font-weight:700;">The Joint of No Return</a> for <span class="orig-price">$4.20</span> <strong>FREE</strong>
   </p>
   <p class="heading-h2">No signups, no hassle.🖖 Just click your fav ebook store below 👇</p>
 
-  <hr class="section-break">
-
-  <!-- ── BOOK 1 ── -->
   <div class="book-section">
     <div class="book-cover-col">
       <a class="book-cover-wrap" href="/tjonr">
@@ -581,6 +577,7 @@
         <p>Surviving robot mercenaries, deadly booby traps, and shapeshifting monsters will seem like a piece of cake compared to the real challenge: doing it all with nothing more than a sack of the schwaggiest schwag in the cosmos.</p>
       </div>
       <p class="pull-quote"><em>"<strong>Alien</strong> meets <strong>Half Baked</strong> meets <strong>Silence of the Lambs</strong> meets <strong>A Few Good Men</strong> meets <strong>Bill &amp; Ted's Excellent Adventure</strong> meets <strong>Godzilla</strong>"</em></p>
+      <p class="book-cta"><strong>SILENCE IS DEADLY. READ IT.</strong></p>
       <div class="store-section">
         <div class="store-row">
           <span class="store-row-label"><strong>Download for <em><span class="orig-price">$4.20</span></em></strong> from one of these fine ebookstores:</span>
@@ -624,9 +621,8 @@
         <p>Rather than choose who lives and dies, Charlie uses his bond with the <em>Starseed</em> to spawn a smaller, pineapple-shaped starship—the <em>Pineapple Express</em>—and sets out to host the precarious peace process. His vision clouded by guilt, heartache, and bong hits, Charlie doesn't notice the dark forces stowing away in the shadows, ready to sow insanity, discord, and <strong><em>murder</em></strong>.</p>
         <p>Now Charlie must race against time to solve the murders and take back control of the <em>Pineapple Express</em> before it's too late—all while confronting the darker aspects of his own stoned mind.</p>
       </div>
+      <p class="book-cta"><strong>WHO DID IT? FIND OUT.</strong></p>
       <div class="store-section">
-        <div class="store-row">
-          <span class="store-row-label"><strong>Download for <em><span class="orig-price">$4.20</span></em></strong> from one of these fine ebookstores:</span>
           <div class="store-row-logos">
             <a href="https://www.amazon.com/gp/product/B0CTSZC653" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
             <a href="https://www.barnesandnoble.com/w/murder-on-the-pineapple-express-tom-sadira/1144780333?ean=2940185503096" target="_blank"><img src="images/nook.png" alt="Nook"></a>
@@ -678,16 +674,28 @@
 </footer>
 
 <script>
-  function handleSubscribe() {
+  async function handleSubscribe() {
     const input = document.getElementById('nl-email');
-    if (input.value && input.value.includes('@')) {
-      input.style.display = 'none';
-      document.querySelector('.newsletter-form button').style.display = 'none';
-      document.getElementById('newsletter-thanks').style.display = 'block';
-      // TODO: POST to Mailerlite endpoint
-    } else {
+    if (!input.value || !input.value.includes('@')) {
       input.focus();
       input.style.borderColor = '#c00';
+      return;
+    }
+    try {
+      const res = await fetch('https://formspree.io/f/telos777@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email: input.value, _subject: 'New HIFI Press Newsletter Signup' })
+      });
+      if (res.ok) {
+        input.style.display = 'none';
+        document.querySelector('.newsletter-form button').style.display = 'none';
+        document.getElementById('newsletter-thanks').style.display = 'block';
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch(e) {
+      alert('Something went wrong. Please try again.');
     }
   }
 </script>
