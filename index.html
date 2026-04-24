@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tom Sadira's Far Out Chronicles sci-fi stoner comedy series, FREE downloads by HIFI Press Publishing</title>
   <meta name="description" content="Tom Sadira's Far Out Chronicles sci-fi stoner comedy series. Snatch your FREE copy of The Joint of No Return. No signups, no hassle.">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,700&display=swap" rel="stylesheet">
@@ -109,6 +110,16 @@
     .heading-h1 a { text-decoration: none; color: inherit; }
     .heading-h1 a:hover { text-decoration: underline; }
 
+    /* Big fluid hero title — fills available width */
+    .hero-title {
+      font-size: clamp(2.4rem, 8vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: #000;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
     .heading-h2 {
       font-size: clamp(1.1rem, 2.5vw, 1.5rem);
       font-weight: 600;
@@ -117,8 +128,28 @@
       margin-bottom: 1rem;
     }
 
-    .heading-h2 a { font-style: italic; text-decoration: none; color: inherit; }
+    .heading-h2 a { text-decoration: none; color: inherit; }
     .heading-h2 a:hover { text-decoration: underline; }
+
+    /* Book title — green, bold, stands out */
+    .book-title {
+      font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.35;
+      color: #2e6b3e;
+      margin-bottom: 0.75rem;
+    }
+
+    .book-title a { font-style: italic; text-decoration: none; color: inherit; }
+    .book-title a:hover { text-decoration: underline; }
+    .book-title em { font-style: normal; } /* series label not italic */
+
+    /* Strikethrough original price */
+    .orig-price {
+      text-decoration: line-through;
+      opacity: 0.55;
+      font-weight: 400;
+    }
 
     /* ── BOOK LAYOUT — two-col on desktop ── */
     .book-section {
@@ -196,7 +227,7 @@
     }
 
     .store-row-logos img {
-      height: 32px;
+      height: clamp(36px, 5vw, 44px);
       width: auto;
       display: block;
       border-radius: 4px;
@@ -205,16 +236,16 @@
     .store-btn-text {
       display: inline-flex;
       align-items: center;
-      padding: 0 0.75rem;
+      padding: 0 0.85rem;
       border: 1px solid #404040;
       border-radius: 4px;
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       text-decoration: none;
       color: #404040;
-      height: 32px;
+      height: clamp(36px, 5vw, 44px);
       white-space: nowrap;
     }
 
@@ -222,10 +253,11 @@
 
     /* ── CTA ABOVE STORE ROWS ── */
     .book-cta {
-      font-size: clamp(1rem, 2vw, 1.4rem);
+      font-size: clamp(1.1rem, 3.5vw, 1.75rem);
       font-weight: 700;
       color: #000;
       margin-bottom: 0.25rem;
+      line-height: 1.2;
     }
 
     /* ── DIVIDERS ── */
@@ -328,6 +360,8 @@
       .nav-inner { height: 48px; }
       .nav-logo-text { font-size: 0.72rem; }
 
+      .hero-title { letter-spacing: -0.02em; }
+
       .book-section {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -340,19 +374,14 @@
       }
 
       .book-content-col { text-align: left; }
-
-      /* On mobile, book-blurb text shouldn't be too wide */
       .book-blurb { font-size: 0.95rem; }
 
-      /* Store rows already column-stacked, just tighten spacing */
       .store-row-label { font-size: 0.85rem; }
       .store-row-logos { gap: 5px; }
-      .store-row-logos img { height: 28px; }
-      .store-btn-text { height: 28px; font-size: 0.65rem; }
+      .store-row-logos img { height: 32px; }
+      .store-btn-text { height: 32px; font-size: 0.68rem; }
 
-      .heading-h1 { font-size: 1.25rem; }
-      .heading-h2 { font-size: 1.05rem; }
-      .book-cta { font-size: 1rem; }
+      .book-cta { font-size: 1.1rem; }
     }
   </style>
 </head>
@@ -378,9 +407,9 @@
   <h1 class="seo-h1">Live High &amp; Prosper! Download Books by Tom Sadira - HIFI Press Books</h1>
 
   <!-- HERO -->
-  <p class="heading-h1"><strong>Live High &amp; Prosper!</strong></p>
+  <p class="hero-title">Live High &amp; Prosper!</p>
   <p class="heading-h1">
-    For a limited time snatch <a href="/tjonr"><em><strong>The Joint of No Return</strong></em></a> for $4.20. <strong>FREE</strong>
+    For a limited time snatch <a href="/tjonr"><em><strong>The Joint of No Return</strong></em></a> for <span class="orig-price">$4.20</span> <strong>FREE</strong>
   </p>
   <p class="heading-h2">No signups, no hassle.🖖 Just click your fav ebook store below 👇</p>
 
@@ -394,8 +423,8 @@
       </a>
     </div>
     <div class="book-content-col">
-      <p class="heading-h2">
-        <a href="/tjonr"><em>The Joint of No Return</em></a> <em>(Far Out Chronicles: Book 1)</em>
+      <p class="book-title">
+        <a href="/tjonr"><em>The Joint of No Return</em></a> <em style="font-weight:400;color:#555">(Far Out Chronicles: Book 1)</em>
       </p>
       <div class="book-blurb">
         <p><strong>Charlie Hong is on the run from both sides of the law.</strong></p>
@@ -449,8 +478,8 @@
       </a>
     </div>
     <div class="book-content-col">
-      <p class="heading-h2">
-        <a href="/ids"><em>Invasion of the Doobie Snatchers</em></a> <em>(Far Out Chronicles: Book 2)</em>
+      <p class="book-title">
+        <a href="/ids"><em>Invasion of the Doobie Snatchers</em></a> <em style="font-weight:400;color:#555">(Far Out Chronicles: Book 2)</em>
       </p>
       <div class="book-blurb">
         <p><strong>In the past 24 hours, stoner Charlie Hong has been promoted from fugitive pot-grower to captain of the <em>Starseed</em>.</strong> Whether he likes it or not, the massive, living, interstellar spaceship—and its five hundred billion inhabitants—are now his responsibility.</p>
@@ -459,7 +488,7 @@
       <p class="book-cta"><strong>READY TO LIGHT UP ANOTHER ADVENTURE?</strong></p>
       <div class="store-section">
         <div class="store-row">
-          <span class="store-row-label"><strong>Download for <em>$4.20</em></strong> from one of these fine ebookstores:</span>
+          <span class="store-row-label"><strong>Download for <em><span class="orig-price">$4.20</span></em></strong> from one of these fine ebookstores:</span>
           <div class="store-row-logos">
             <a href="https://www.amazon.com/gp/product/B07H42XHWR/" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
             <a href="https://www.barnesandnoble.com/w/mitey-morphic-flower-raiders-tom-sadira/1129487816?ean=2940161651438" target="_blank"><img src="images/nook.png" alt="Nook"></a>
@@ -501,8 +530,8 @@
       </a>
     </div>
     <div class="book-content-col">
-      <p class="heading-h2">
-        <a href="/ftb"><em>For the Thrill of the Blunt</em></a> <em>(Far Out Chronicles: Book 3)</em>
+      <p class="book-title">
+        <a href="/ftb"><em>For the Thrill of the Blunt</em></a> <em style="font-weight:400;color:#555">(Far Out Chronicles: Book 3)</em>
       </p>
       <div class="book-blurb">
         <p><strong>Being captain of a gigantic, living spaceship that runs on marijuana can result in an extreme case of the munchies.</strong> After a few days of living off vegetarian fare, Charlie Hong craves one of the few things the <em>Starseed</em> won't provide: meat.</p>
@@ -511,7 +540,7 @@
       <p class="book-cta"><strong>CRAVING MORE ALREADY?</strong></p>
       <div class="store-section">
         <div class="store-row">
-          <span class="store-row-label"><strong>Download for <em>$4.20</em></strong> from one of these fine ebookstores:</span>
+          <span class="store-row-label"><strong>Download for <em><span class="orig-price">$4.20</span></em></strong> from one of these fine ebookstores:</span>
           <div class="store-row-logos">
             <a href="https://www.amazon.com/Thrill-Blunt-Far-Chronicles-Book-ebook/dp/B07Q5H4F46/" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
             <a href="https://www.barnesandnoble.com/w/for-the-thrill-of-the-blunt-tom-sadira/1131420996?ean=2940161180297" target="_blank"><img src="images/nook.png" alt="Nook"></a>
@@ -543,8 +572,8 @@
       </a>
     </div>
     <div class="book-content-col">
-      <p class="heading-h2">
-        <a href="/sos"><em>The Silence of the Schwag</em></a> <em>(Far Out Chronicles: Book 4)</em>
+      <p class="book-title">
+        <a href="/sos"><em>The Silence of the Schwag</em></a> <em style="font-weight:400;color:#555">(Far Out Chronicles: Book 4)</em>
       </p>
       <div class="book-blurb">
         <p><strong>Light years from his old life back on Earth, Charlie still managed to end up on the wrong side of the law.</strong></p>
@@ -554,7 +583,7 @@
       <p class="pull-quote"><em>"<strong>Alien</strong> meets <strong>Half Baked</strong> meets <strong>Silence of the Lambs</strong> meets <strong>A Few Good Men</strong> meets <strong>Bill &amp; Ted's Excellent Adventure</strong> meets <strong>Godzilla</strong>"</em></p>
       <div class="store-section">
         <div class="store-row">
-          <span class="store-row-label"><strong>Download for <em>$4.20</em></strong> from one of these fine ebookstores:</span>
+          <span class="store-row-label"><strong>Download for <em><span class="orig-price">$4.20</span></em></strong> from one of these fine ebookstores:</span>
           <div class="store-row-logos">
             <a href="https://www.amazon.com/gp/product/B08M9YGGK7" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
             <a href="https://www.barnesandnoble.com/w/silence-of-the-schwag-tom-sadira/1138256298?ean=2940162879503" target="_blank"><img src="images/nook.png" alt="Nook"></a>
@@ -586,8 +615,8 @@
       </a>
     </div>
     <div class="book-content-col">
-      <p class="heading-h2">
-        <a href="/mpx"><em>Murder on the Pineapple Express</em></a> <em>(Far Out Chronicles: Book 5)</em>
+      <p class="book-title">
+        <a href="/mpx"><em>Murder on the Pineapple Express</em></a> <em style="font-weight:400;color:#555">(Far Out Chronicles: Book 5)</em>
       </p>
       <div class="book-blurb">
         <p><strong>Not even the <em>Starseed</em> can be in two places at once.</strong></p>
@@ -597,7 +626,7 @@
       </div>
       <div class="store-section">
         <div class="store-row">
-          <span class="store-row-label"><strong>Download for <em>$4.20</em></strong> from one of these fine ebookstores:</span>
+          <span class="store-row-label"><strong>Download for <em><span class="orig-price">$4.20</span></em></strong> from one of these fine ebookstores:</span>
           <div class="store-row-logos">
             <a href="https://www.amazon.com/gp/product/B0CTSZC653" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
             <a href="https://www.barnesandnoble.com/w/murder-on-the-pineapple-express-tom-sadira/1144780333?ean=2940185503096" target="_blank"><img src="images/nook.png" alt="Nook"></a>
