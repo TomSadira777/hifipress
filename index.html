@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tom Sadira's Far Out Chronicles sci-fi stoner comedy series, FREE downloads by HIFI Press Publishing</title>
+  <meta name="description" content="Tom Sadira's Far Out Chronicles sci-fi stoner comedy series. Snatch your FREE copy of The Joint of No Return. No signups, no hassle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fff;
+      color: #404040;
+      font-family: 'DM Sans', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ── NAV ── */
+    .site-header {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 0 2rem;
+    }
+
+    .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 48px;
+    }
+
+    .nav-logo a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-logo img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .nav-logo-text {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #404040;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #404040;
+    }
+
+    .nav-links a:hover { color: #000; }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem;
+      text-align: center;
+    }
+
+    /* ── VISUALLY HIDDEN SEO H1 ── */
+    .seo-h1 {
+      position: absolute;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+    }
+
+    /* ── HEADING SIZES ── */
+    .heading-h1 {
+      font-family: 'DM Sans', Helvetica, Arial, sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: #000;
+      margin-bottom: 0.75rem;
+    }
+
+    .heading-h1 a { text-decoration: none; color: inherit; }
+    .heading-h1 a:hover { text-decoration: underline; }
+
+    .heading-h2 {
+      font-family: 'DM Sans', Helvetica, Arial, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #000;
+      margin-bottom: 1rem;
+    }
+
+    .heading-h2 a { font-style: italic; text-decoration: none; color: inherit; }
+    .heading-h2 a:hover { text-decoration: underline; }
+
+    /* ── BOOK COVER ── */
+    .book-cover-wrap {
+      display: block;
+      margin: 0 auto 1.5rem;
+      max-width: 560px;
+    }
+
+    .book-cover-wrap img { margin: 0 auto; }
+
+    /* ── BOOK BLURB ── */
+    .book-blurb {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #404040;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .book-blurb p { margin-bottom: 0.6rem; }
+    .book-blurb p:last-child { margin-bottom: 0; }
+
+    /* ── STORE ROWS ── */
+    .store-section {
+      margin: 1rem 0;
+      border-top: 1px solid #f0f0f0;
+      padding-top: 0.75rem;
+    }
+
+    .store-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.25rem;
+    }
+
+    .store-row-label {
+      font-family: 'DM Sans', Helvetica, Arial, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #000;
+      text-align: left;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .store-row-logos {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    /* Retailer button images — uniform height, dark-bg buttons get rounded corners */
+    .store-row-logos a {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .store-row-logos img {
+      height: 36px;
+      width: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    /* Text-only fallback for stores without an image button (e.g. Audible) */
+    .store-btn-text {
+      display: inline-block;
+      padding: 0.3rem 0.75rem;
+      border: 1px solid #404040;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #404040;
+      line-height: 1;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .store-btn-text:hover { background: #f5f5f5; }
+
+    /* ── DIVIDERS ── */
+    .section-break {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 2.5rem 0;
+    }
+
+    /* ── BOOK 4 PULL QUOTE ── */
+    .pull-quote {
+      font-family: 'DM Sans', Helvetica, Arial, sans-serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #000;
+      margin: 1.25rem 0;
+      text-align: center;
+    }
+
+    /* ── NEWSLETTER ── */
+    .newsletter { margin: 0.5rem 0 1rem; }
+
+    .newsletter-body {
+      font-family: 'DM Sans', Helvetica, Arial, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.8;
+      color: #000;
+      margin-bottom: 1.25rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      max-width: 360px;
+      margin: 0 auto 1rem;
+    }
+
+    .newsletter-form input[type="email"] {
+      width: 100%;
+      padding: 0.55rem 1rem;
+      border: 1px solid #ccc;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #404040;
+      outline: none;
+    }
+
+    .newsletter-form input[type="email"]:focus { border-color: #888; }
+
+    .newsletter-form button {
+      padding: 0.55rem 2rem;
+      background: #404040;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+    }
+
+    .newsletter-form button:hover { background: #222; }
+
+    .newsletter-thanks { display: none; font-weight: 700; margin-bottom: 0.75rem; }
+
+    .newsletter-whitelist { font-size: 0.95rem; line-height: 1.6; }
+    .newsletter-whitelist a { font-weight: 700; text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid #e0e0e0;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      line-height: 2;
+    }
+
+    footer a { color: #888; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+      .nav-inner { height: auto; padding: 0.6rem 0; }
+      main { padding: 1.5rem 1rem 3rem; }
+      .store-row { flex-direction: column; align-items: flex-start; }
+      .store-row-logos { justify-content: flex-start; }
+      .heading-h1 { font-size: 1.35rem; }
+      .heading-h2 { font-size: 1.15rem; }
+      .book-cover-wrap { max-width: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="site-header">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="/">
+        <img src="images/HIFI_v2.png" alt="HIFI Press Books logo">
+        <span class="nav-logo-text">HIFI Press Books</span>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/contact">Contact HIFI</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <h1 class="seo-h1">Live High &amp; Prosper! Download Books by Tom Sadira - HIFI Press Books</h1>
+
+  <!-- HERO -->
+  <p class="heading-h1"><strong>Live High &amp; Prosper!</strong></p>
+
+  <p class="heading-h1">
+    For a limited time snatch <a href="/tjonr"><em><strong>The Joint of No Return</strong></em></a> for $4.20. <strong>FREE</strong>
+  </p>
+
+  <p class="heading-h2">No signups, no hassle.🖖 Just click your fav ebook store below 👇</p>
+
+  <hr class="section-break">
+
+  <!-- ── BOOK 1 ── -->
+  <a class="book-cover-wrap" href="/tjonr">
+    <img src="images/book1-cover.png" alt="The Joint of No Return cover">
+  </a>
+
+  <p class="heading-h2">
+    <a href="/tjonr"><em>The Joint of No Return</em></a> <em>(Far Out Chronicles: Book 1)</em>
+  </p>
+
+  <div class="book-blurb">
+    <p><strong>Charlie Hong is on the run from both sides of the law.</strong></p>
+    <p>He's spent the last year in hiding, cultivating one last hare-brained scheme to escape his troubles: a clandestine marijuana operation. Just as he's about to cash in, his cash crop is stolen by a bright light appearing in the night sky. After catching a ride with one of his plants, he finds himself thrown into a world far stranger than anything he could have possibly imagined.</p>
+    <p>Does the stoned stowaway have what it takes to free the <em>Starseed</em>, a massive living spaceship overflowing with bizarre lifeforms, from the clutches of a mysterious force field trapping it in Earth's orbit?</p>
+    <p>Is he up for the challenge of fighting an evil Reptilian race bent on enslaving humanity?</p>
+    <p>More importantly, before he decides anything: <em>does he have time to light one up?</em></p>
+  </div>
+
+  <p class="heading-h1"><strong>GET READY TO BLAST OFF!</strong></p>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><strong>Download for <em>$4.20</em> FREE</strong> from any of these fine Earth retailers:</span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/gp/product/B07H9KVJ5D" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+        <a href="https://www.barnesandnoble.com/w/the-joint-of-no-return-tom-sadira/1129252862?ean=2940161701720" target="_blank"><img src="images/nook.png" alt="Nook"></a>
+        <a href="https://itunes.apple.com/us/book/the-joint-of-no-return/id1434230367" target="_blank"><img src="images/Apple-Books-Logo.png" alt="Apple Books"></a>
+        <a href="https://play.google.com/store/books/details/Tom_Sadira_The_Joint_of_No_Return?id=vrloDwAAQBAJ" target="_blank"><img src="images/google.png" alt="Google Play"></a>
+        <a href="https://www.kobo.com/us/en/ebook/the-joint-of-no-return" target="_blank"><img src="images/Kobo-80-Rakuten.png" alt="Kobo"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><em>Like putting books in your ears?</em> Snatch the <strong>audiobook</strong>:</span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/Joint-No-Return-Chronicles-Book/dp/B07HBF58S5/" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon"></a>
+        <a href="https://www.audible.com/pd/B07HBCB3XH/" target="_blank" class="store-btn-text">Audible</a>
+        <a href="https://itunes.apple.com/us/audiobook/the-joint-of-no-return-far-out-chronicles-book-1-unabridged/id1436346594" target="_blank"><img src="images/Apple-Books-Logo.png" alt="Apple Books"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><em>Like the smell of paper?</em> Get the <strong>paperback</strong> for <em>$12.95:</em></span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/Joint-Return-Far-Out-Chronicles/dp/1948588013/" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon"></a>
+        <a href="https://www.barnesandnoble.com/w/the-joint-of-no-return-tom-sadira/1129252862?ean=9781948588010" target="_blank"><img src="images/329371-1.png" alt="Barnes & Noble"></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-break">
+
+  <!-- ── BOOK 2 ── -->
+  <a class="book-cover-wrap" href="/ids">
+    <img src="images/book2-cover.png" alt="Invasion of the Doobie Snatchers cover">
+  </a>
+
+  <p class="heading-h2">
+    <a href="/ids"><em>Invasion of the Doobie Snatchers</em></a> <em>(Far Out Chronicles: Book 2)</em>
+  </p>
+
+  <div class="book-blurb">
+    <p><strong>In the past 24 hours, stoner Charlie Hong has been promoted from fugitive pot-grower to captain of the <em>Starseed</em>.</strong> Whether he likes it or not, the massive, living, interstellar spaceship—and its five hundred billion inhabitants—are now his responsibility.</p>
+    <p>As his suspicious crew gives him a tour of the ship, a quiet invasion unfolds. When the rest of his team is disabled by the buggy invaders, Charlie is left with a decision: to try to save the ship armed with only his stoned wit and a plump red hen, or to hightail it back to his old life on Earth.</p>
+  </div>
+
+  <p class="heading-h1"><strong>READY TO LIGHT UP ANOTHER ADVENTURE?</strong></p>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><strong>Download for <em>$4.20</em></strong> from one of these fine ebookstores:</span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/gp/product/B07H42XHWR/" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+        <a href="https://www.barnesandnoble.com/w/mitey-morphic-flower-raiders-tom-sadira/1129487816?ean=2940161651438" target="_blank"><img src="images/nook.png" alt="Nook"></a>
+        <a href="https://itunes.apple.com/us/book/mitey-morphic-flower-raiders/id1435617234" target="_blank"><img src="images/Apple-Books-Logo.png" alt="Apple Books"></a>
+        <a href="https://play.google.com/store/books/details/Tom_Sadira_Mitey_Morphic_Flower_Raiders?id=Ck1tDwAAQBAJ" target="_blank"><img src="images/google.png" alt="Google Play"></a>
+        <a href="https://www.kobo.com/us/en/ebook/mitey-morphic-flower-raiders" target="_blank"><img src="images/Kobo-80-Rakuten.png" alt="Kobo"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><em>Like putting books in your ears?</em> Snatch the <strong>audiobook</strong>:</span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/Mitey-Morphic-Flower-Raiders-Chronicles/dp/B07L4V9DZT/" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon"></a>
+        <a href="https://www.audible.com/pd/B07L49YKP2/" target="_blank" class="store-btn-text">Audible</a>
+        <a href="https://itunes.apple.com/us/audiobook/mitey-morphic-flower-raiders-far-out-chronicles-book/id1446248745" target="_blank"><img src="images/Apple-Books-Logo.png" alt="Apple Books"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><em>Like the smell of paper?</em> Get the <strong>paperback</strong> for <em>$12.95:</em></span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/Mitey-Morphic-Flower-Raiders-Chronicles/dp/1948588048/" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon"></a>
+        <a href="https://www.barnesandnoble.com/w/mitey-morphic-flower-raiders-tom-sadira/1129487816?ean=9781948588041" target="_blank"><img src="images/329371-1.png" alt="Barnes & Noble"></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-break">
+
+  <!-- ── BOOK 3 ── -->
+  <a class="book-cover-wrap" href="/ftb">
+    <img src="images/book3-cover.png" alt="For the Thrill of the Blunt cover">
+  </a>
+
+  <p class="heading-h2">
+    <a href="/ftb"><em>For the Thrill of the Blunt</em></a> <em>(Far Out Chronicles: Book 3)</em>
+  </p>
+
+  <div class="book-blurb">
+    <p><strong>Being captain of a gigantic, living spaceship that runs on marijuana can result in an extreme case of the munchies.</strong> After a few days of living off vegetarian fare, Charlie Hong craves one of the few things the <em>Starseed</em> won't provide: meat.</p>
+    <p>After striking a secret deal with a seductive and mysterious member of his crew, Charlie enlists an experienced hunting guide and sets out to hunt one of the galaxy's most delicious prey—the elusive and rare chocolate moose. When their trip quickly turns sour, Charlie and his crew must find a way to survive in a world where everyone—especially stoners with no survival skills—becomes prey.</p>
+  </div>
+
+  <p class="heading-h1"><strong>CRAVING MORE ALREADY?</strong></p>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><strong>Download for <em>$4.20</em></strong> from one of these fine ebookstores:</span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/Thrill-Blunt-Far-Chronicles-Book-ebook/dp/B07Q5H4F46/" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+        <a href="https://www.barnesandnoble.com/w/for-the-thrill-of-the-blunt-tom-sadira/1131420996?ean=2940161180297" target="_blank"><img src="images/nook.png" alt="Nook"></a>
+        <a href="https://books.apple.com/us/book/for-the-thrill-of-the-blunt/id1459666416" target="_blank"><img src="images/Apple-Books-Logo.png" alt="Apple Books"></a>
+        <a href="https://play.google.com/store/books/details/Tom_Sadira_For_the_Thrill_of_the_Blunt?id=9f2RDwAAQBAJ" target="_blank"><img src="images/google.png" alt="Google Play"></a>
+        <a href="https://www.kobo.com/us/en/ebook/for-the-thrill-of-the-blunt" target="_blank"><img src="images/Kobo-80-Rakuten.png" alt="Kobo"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><em>Like the smell of paper?</em> Get the <strong>paperback</strong> for <em>$12.95:</em></span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/Thrill-Blunt-Far-Out-Chronicles/dp/1948588072/" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon"></a>
+        <a href="https://www.barnesandnoble.com/w/for-the-thrill-of-the-blunt-tom-sadira/1131420996?ean=9781948588072" target="_blank"><img src="images/329371-1.png" alt="Barnes & Noble"></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-break">
+
+  <!-- ── BOOK 4 ── -->
+  <a class="book-cover-wrap" href="/sos">
+    <img src="images/book4-cover.png" alt="The Silence of the Schwag cover">
+  </a>
+
+  <p class="heading-h2">
+    <a href="/sos"><em>The Silence of the Schwag</em></a> <em>(Far Out Chronicles: Book 4)</em>
+  </p>
+
+  <div class="book-blurb">
+    <p><strong>Light years from his old life back on Earth, Charlie still managed to end up on the wrong side of the law.</strong></p>
+    <p>When a member of his crew is arrested by the Galactic Federation, Charlie embarks on a dangerous mission to set things right. Stranded on a planet so delicate that sound is destructive, his stoned wit is put to the test.</p>
+    <p>Surviving robot mercenaries, deadly booby traps, and shapeshifting monsters will seem like a piece of cake compared to the real challenge: doing it all with nothing more than a sack of the schwaggiest schwag in the cosmos.</p>
+  </div>
+
+  <p class="pull-quote"><em>"<strong>Alien</strong> meets <strong>Half Baked</strong> meets <strong>Silence of the Lambs</strong> meets <strong>A Few Good Men</strong> meets <strong>Bill &amp; Ted's Excellent Adventure</strong> meets <strong>Godzilla</strong>"</em></p>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><strong>Download for <em>$4.20</em></strong> from one of these fine ebookstores:</span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/gp/product/B08M9YGGK7" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+        <a href="https://www.barnesandnoble.com/w/silence-of-the-schwag-tom-sadira/1138256298?ean=2940162879503" target="_blank"><img src="images/nook.png" alt="Nook"></a>
+        <a href="https://books.apple.com/us/book/silence-of-the-schwag/id1540148346" target="_blank"><img src="images/Apple-Books-Logo.png" alt="Apple Books"></a>
+        <a href="https://play.google.com/store/books/details?id=OIgIEAAAQBAJ" target="_blank"><img src="images/google.png" alt="Google Play"></a>
+        <a href="https://www.kobo.com/us/en/ebook/silence-of-the-schwag" target="_blank"><img src="images/Kobo-80-Rakuten.png" alt="Kobo"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><em>Like the smell of paper?</em> Get the <strong>paperback</strong> for <em>$12.95:</em></span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/Silence-Schwag-Tom-Sadira/dp/1948588137/" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon"></a>
+        <a href="https://www.barnesandnoble.com/w/silence-of-the-schwag-tom-sadira/1138256298?ean=9781948588133" target="_blank"><img src="images/329371-1.png" alt="Barnes & Noble"></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-break">
+
+  <!-- ── BOOK 5 ── -->
+  <a class="book-cover-wrap" href="/mpx">
+    <img src="images/book5-cover.png" alt="Murder on the Pineapple Express cover">
+  </a>
+
+  <p class="heading-h2">
+    <a href="/mpx"><em>Murder on the Pineapple Express</em></a> <em>(Far Out Chronicles: Book 5)</em>
+  </p>
+
+  <div class="book-blurb">
+    <p><strong>Not even the <em>Starseed</em> can be in two places at once.</strong></p>
+    <p>Captain Charlie Hong and the crew of the <em>Starseed</em> are faced with an impossible choice: save a planet from its dying star or fulfill their promise of hosting a peace summit for a desperate system locked in a cyclical three-way war.</p>
+    <p>Rather than choose who lives and dies, Charlie uses his bond with the <em>Starseed</em> to spawn a smaller, pineapple-shaped starship—the <em>Pineapple Express</em>—and sets out to host the precarious peace process. His vision clouded by guilt, heartache, and bong hits, Charlie doesn't notice the dark forces stowing away in the shadows, ready to sow insanity, discord, and <strong><em>murder</em></strong>.</p>
+    <p>Now Charlie must race against time to solve the murders and take back control of the <em>Pineapple Express</em> before it's too late—all while confronting the darker aspects of his own stoned mind.</p>
+  </div>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><strong>Download for <em>$4.20</em></strong> from one of these fine ebookstores:</span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/gp/product/B0CTSZC653" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+        <a href="https://www.barnesandnoble.com/w/murder-on-the-pineapple-express-tom-sadira/1144780333?ean=2940185503096" target="_blank"><img src="images/nook.png" alt="Nook"></a>
+        <a href="https://play.google.com/store/books/details?id=Dy7yEAAAQBAJ" target="_blank"><img src="images/google.png" alt="Google Play"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="store-section">
+    <div class="store-row">
+      <span class="store-row-label"><em>Like the smell of paper?</em> Get the <strong>paperback</strong> for <em>$12.95:</em></span>
+      <div class="store-row-logos">
+        <a href="https://www.amazon.com/gp/product/B0CTSZC653" target="_blank"><img src="images/amazon-kindle-logo.png" alt="Amazon"></a>
+        <a href="https://www.barnesandnoble.com/w/murder-on-the-pineapple-express-tom-sadira/1144780333?ean=2940185503096" target="_blank"><img src="images/329371-1.png" alt="Barnes & Noble"></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-break">
+
+  <!-- ── NEWSLETTER ── -->
+  <div class="newsletter">
+    <p class="newsletter-body">
+      Sign up for the HIFI Press newsletter and get cool stuff:<br>
+      • <strong>Monthly short stories</strong> for special internet buds like you 🖖<br>
+      • Exclusive <strong>sneak peeks &amp; early access</strong> to new <em>Far Out</em> adventures
+    </p>
+    <div class="newsletter-form">
+      <input type="email" id="nl-email" placeholder="Email Address" aria-label="Email address">
+      <button type="button" onclick="handleSubscribe()">Subscribe</button>
+    </div>
+    <p class="newsletter-thanks" id="newsletter-thanks"><strong>Thanks!</strong> In a few moments you'll receive a confirmation email.</p>
+    <p class="newsletter-whitelist">
+      <strong>Visit our <a href="/whitelist">Whitelist Instructions page</a> to make sure you see our emails in your inbox.</strong>
+    </p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>2025 HIFI Press LLC · Arizona, USA</p>
+  <nav class="footer-links">
+    <a href="/about">About</a>
+    <a href="/terms-of-service">Terms of Service</a>
+    <a href="/privacy-policy">Privacy Policy</a>
+  </nav>
+</footer>
+
+<script>
+  function handleSubscribe() {
+    const input = document.getElementById('nl-email');
+    if (input.value && input.value.includes('@')) {
+      input.style.display = 'none';
+      document.querySelector('.newsletter-form button').style.display = 'none';
+      document.getElementById('newsletter-thanks').style.display = 'block';
+      // TODO: POST to Mailerlite endpoint
+    } else {
+      input.focus();
+      input.style.borderColor = '#c00';
+    }
+  }
+</script>
+
+</body>
+</html>
