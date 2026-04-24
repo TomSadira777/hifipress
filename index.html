@@ -26,7 +26,7 @@
     /* ── NAV ── */
     .site-header {
       border-bottom: 1px solid #e0e0e0;
-      padding: 0 2rem;
+      padding: 0;
       position: sticky;
       top: 0;
       background: #fff;
@@ -40,6 +40,7 @@
       align-items: center;
       justify-content: space-between;
       height: 52px;
+      padding: 0 2rem;
     }
 
     .nav-logo a {
@@ -396,7 +397,7 @@
       </a>
     </div>
     <ul class="nav-links">
-      <li><a href="/contact">Contact HIFI</a></li>
+      <li><a href="contact.html">Contact HIFI</a></li>
     </ul>
   </div>
 </header>
@@ -681,20 +682,34 @@
       input.style.borderColor = '#c00';
       return;
     }
+    const btn = document.querySelector('.newsletter-form button');
+    btn.disabled = true;
+    btn.textContent = 'Subscribing...';
     try {
-      const res = await fetch('https://formspree.io/f/telos777@gmail.com', {
+      const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ email: input.value, _subject: 'New HIFI Press Newsletter Signup' })
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiYmU4ZGYzNTk4NjMxMjg3NTMzOWUyNDQ3YzMyNWI2ZWY4M2E5OWM4NjU1ZDFhNmI5Njc0MTU5NGUwZTk3NzNhZjEwOGFmNzUxODJjZDcwNWEiLCJpYXQiOjE3NzcwNzEwODIuMzY3NTU4LCJuYmYiOjE3NzcwNzEwODIuMzY3NTYxLCJleHAiOjQ5MzI3NDQ2ODIuMzU5Mzk2LCJzdWIiOiI4MzM2NzkiLCJzY29wZXMiOltdfQ.mmIemHSZA4tQ39DkTyvrk9bwUxztMPcsePMvCJV5u34V4SIhsKpbEqvCbknACvlkw57ry9LNXoxoeZA_8Jj7CqSGRIuWPgfZhd1xkt5r1GNv_MQC05jGiT2SxwXG2chSgcPIFrLHLYKOCu1Jvh2TSBzRFMLxviEO2uHJ181sJwsTgA8LAXv8cQlHnMZ6Csc3dA9X_GYyx_aetad-gNhP9d2CxscWvPDq7GDPXSc_xm0B4uWF4ig_IBPLkEtVv0I0hG_czUT8EroppBtiZF-zTiPyv9dpbfqV-wtZhszfC1wi__0al1ayDP2-vyyGomwAQKEn4hDPzuWnJmnfF2trtoeN_xKvmTZ5cyD0aFKpdxe2otKkl_NvCIPBHF0nNa2--3S6A2Nh28LhOl1vd1X8T_X1p4PQBr8V3uUJv_lQ4EdjnOsch3SWVDuudrA-CDZARpeVKdd8Ayuzy0K3QNtcHgamFRGsfZCc53_bbnzHShWaZdsvXtEdJP1l9sRKM05Rc5jHB6X0YRWBGmsq1TWweQdEc23_xqkf34frh7qcs4pfqhMLJ_1RZx_2f4CFYTQx_KNs-VYGk5bomQmZZ2INZlJO7ZcGv5n-yErLb7Eq0Qs_dXZg2t6PZ_fRtQ8KrXexoonb7Y7D0VrhD4n70tCmx44yp9dPh78kpll_yd4a6IM'
+        },
+        body: JSON.stringify({
+          email: input.value,
+          groups: ['112744497329210936']
+        })
       });
-      if (res.ok) {
+      if (res.ok || res.status === 201 || res.status === 200) {
         input.style.display = 'none';
-        document.querySelector('.newsletter-form button').style.display = 'none';
+        btn.style.display = 'none';
         document.getElementById('newsletter-thanks').style.display = 'block';
       } else {
+        btn.disabled = false;
+        btn.textContent = 'Subscribe';
         alert('Something went wrong. Please try again.');
       }
     } catch(e) {
+      btn.disabled = false;
+      btn.textContent = 'Subscribe';
       alert('Something went wrong. Please try again.');
     }
   }
