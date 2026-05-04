@@ -116,9 +116,10 @@ footer a:hover { text-decoration: underline; }
 @media (max-width: 680px) {
   main { padding: 1.5rem 1rem 3rem; }
   .nav-inner { height: 48px; padding: 0 1rem; }
-  .nav-links { gap: 1rem; }
-  .hero { grid-template-columns: 1fr; gap: 1.5rem; }
-  .hero-photo-wrap { max-width: 280px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; gap: 0; }
+  .hero-text { order: 1; padding-bottom: 1.5rem; }
+  .hero-photo-wrap { order: 2; max-width: 100%; width: calc(100% + 2rem); margin-left: -1rem; margin-right: -1rem; }
   .stats-row { grid-template-columns: 1fr; }
   .stat { border-right: none; border-bottom: 1px solid #e0e0e0; }
   .stat:last-child { border-bottom: none; }
@@ -164,7 +165,7 @@ footer a:hover { text-decoration: underline; }
     <div class="hero-text">
       <div class="hero-kicker">Media Kit</div>
       <div class="hero-name">Tom<br>Sadira</div>
-      <p class="hero-tagline">Tom Sadira has spent his career in cannabis (cultivating, operating a dispensary, and working at Leafly) and along the way wrote five novels about a weed farmer who gets abducted by aliens — a premise that makes more sense the further you get into the industry.</p>
+      <p class="hero-tagline">Tom Sadira has spent two decades in cannabis — cultivating, operating a dispensary, and working in technology at Leafly — and along the way wrote five scifi comedy novels about a weed grower who gets abducted by aliens and accidentally becomes captain of an enormous living spaceship that runs on THC.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Book Tom</a>
         <a href="https://www.amazon.com/gp/product/B07H9KVJ5D" target="_blank" class="btn-secondary">Free Book 1</a>
@@ -209,9 +210,11 @@ footer a:hover { text-decoration: underline; }
   <section>
     <div class="section-label">About Tom</div>
     <div class="bio-text">
-      <p>Tom Sadira has worked in cannabis at every level — as a cultivator, a dispensary operator, and currently at Leafly, where he works on the consumer and data side of one of the industry's most recognized platforms. That trajectory gives him an unusually complete view of how the cannabis world actually functions, from the soil up.</p>
-      <p>Alongside his industry career, Tom is the author of the <em>Far Out Chronicles</em> — a five-book sci-fi comedy series described as "Star Trek meets Cheech & Chong." The series follows cannabis grower Charlie Hong, whose crop gets stolen by aliens and who accidentally hitches a ride trying to save it. The books have been compared to Douglas Adams, Barry Hutchison's Space Team series, and Ernest Cline, and have built a dedicated following among cannabis culture and science fiction comedy fans.</p>
-      <p>Tom is based in Arizona.</p>
+      <p>Tom Sadira has worked in cannabis at every level, from seed to screen: as a cultivator, a dispensary operator, and currently at Leafly, where he works on the consumer and data side of one of the industry's most recognized platforms. That trajectory gives him an unusually complete view of how the cannabis world actually functions, from the soil up.</p>
+      <p>Alongside his industry career, Tom is the author of the <em>Far Out Chronicles</em> — a five-book sci-fi stoner comedy series described as "<i>Star Trek meets Cheech & Chong.</i>" The series follows fugative cannabis grower Charlie Hong, whose crop gets stolen by aliens and who accidentally hitches a ride while trying to save it. The books have been compared to Douglas Adams, Matt Dinniman's <i>Dungeon Crawler Carl</i> series, Barry Hutchison's <i>Space Team</i> series, Ernest Cline, Philip K. Dick, Hunter S. Thompson, and Terry Pratchett. The series has built a dedicated following among cannabis culture and science fiction comedy fans.</p>
+      <p><b>Author Bio</b>Tom Sadira is known throughout the multiverse as one of the most accomplished authors of sci-fi and fantasy to have ever spawned in this sector. He’s been published in journals, anthologies, and collections throughout this galactic quadrant, most of which you’ve never heard of, so just forget I mentioned it. Sadly, his homeworld of Earth is one of the last planets to catch on.</p> 
+
+<p>He currently writes from the intense solar radiation of Arizona with his lovely wife and three children (all human, probably).</p>
     </div>
   </section>
 
@@ -223,7 +226,7 @@ footer a:hover { text-decoration: underline; }
     <div class="photos-grid">
       <div class="photo-card">
         <img src="../images/tom-hero.png" alt="Tom Sadira on a desert rock formation holding a book toward the sky">
-        <div class="photo-caption">Arizona desert</div>
+        <div class="photo-caption">Camelback Mtn</div>
         <a href="../images/tom-hero.png" download class="photo-download">Download</a>
       </div>
       <div class="photo-card">
