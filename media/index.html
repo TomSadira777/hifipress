@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Kit – Tom Sadira | HIFI Press Books</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #fff; color: #404040; font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.8; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ── NAV ── */
+.site-header { border-bottom: 1px solid #e0e0e0; padding: 0; position: sticky; top: 0; background: #fff; z-index: 100; }
+.nav-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 52px; padding: 0 2rem; }
+.nav-logo a { text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
+.nav-logo img { width: 40px; height: 40px; object-fit: contain; }
+.nav-logo-text { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #404040; white-space: nowrap; }
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links a { text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #404040; }
+.nav-links a:hover { color: #000; }
+
+/* ── MAIN ── */
+main { max-width: 960px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+/* ── SECTION LABEL ── */
+.section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #aaa; margin-bottom: 1.25rem; }
+
+/* ── HERO ── */
+.hero { display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start; margin-bottom: 0.5rem; }
+.hero-kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #2e6b3e; margin-bottom: 0.75rem; }
+.hero-name { font-size: clamp(2.8rem, 8vw, 5.5rem); font-weight: 700; line-height: 1.05; color: #000; letter-spacing: -0.02em; margin-bottom: 1rem; }
+.hero-tagline { font-size: 1.05rem; line-height: 1.85; color: #404040; margin-bottom: 1.5rem; max-width: 520px; }
+.hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
+.btn-primary { display: inline-flex; align-items: center; padding: 0 1.5rem; height: 44px; background: #404040; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 2px; }
+.btn-primary:hover { background: #222; color: #fff; }
+.btn-secondary { display: inline-flex; align-items: center; padding: 0 1.5rem; height: 44px; border: 1.5px solid #404040; color: #404040; font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 2px; }
+.btn-secondary:hover { background: #f5f5f5; }
+.hero-social { display: flex; gap: 1rem; align-items: center; margin-top: 1rem; }
+.hero-social a { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: #aaa; text-decoration: none; letter-spacing: 0.05em; }
+.hero-social a:hover { color: #404040; }
+.hero-social svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+
+/* hero photo */
+.hero-photo-wrap { width: 100%; }
+.hero-photo-wrap img { width: 100%; height: auto; }
+
+/* ── DIVIDER ── */
+.section-break { border: none; border-top: 1px solid #e0e0e0; margin: 3rem 0; }
+
+/* ── STATS ── */
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid #e0e0e0; }
+.stat { padding: 1.5rem 1.75rem; border-right: 1px solid #e0e0e0; }
+.stat:last-child { border-right: none; }
+.stat-number { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; color: #000; line-height: 1; margin-bottom: 0.3rem; }
+.stat-label { font-size: 0.78rem; color: #888; letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* ── BIO ── */
+.bio-text { font-size: 1rem; line-height: 1.85; color: #404040; max-width: 680px; }
+.bio-text p { margin-bottom: 1rem; }
+.bio-text p:last-child { margin-bottom: 0; }
+
+/* ── PHOTOS ── */
+.photos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.photo-card img { width: 100%; height: auto; display: block; }
+.photo-caption { font-size: 0.78rem; color: #aaa; margin-top: 0.5rem; }
+.photo-download { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2e6b3e; text-decoration: underline; margin-top: 0.25rem; }
+
+/* ── BOOKS GRID ── */
+.books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; }
+.book-card-small img { width: 100%; height: auto; margin-bottom: 0.5rem; }
+.book-card-small .book-name { font-size: 0.78rem; line-height: 1.4; color: #404040; }
+.book-card-small .book-amt { font-size: 0.78rem; font-weight: 700; color: #2e6b3e; margin-top: 2px; }
+.omnibus-note { font-size: 0.88rem; color: #888; margin-top: 1rem; }
+.omnibus-note a { color: #2e6b3e; font-weight: 600; text-decoration: underline; }
+
+/* ── ALIEN REVIEWS ── */
+.reviews-stack { border: 1px solid #e0e0e0; }
+.review-card { padding: 1.5rem 1.75rem; border-bottom: 1px solid #e0e0e0; }
+.review-card:last-child { border-bottom: none; }
+.review-stars { color: #f59e0b; font-size: 0.85rem; letter-spacing: 3px; margin-bottom: 0.6rem; }
+.review-text { font-size: 0.95rem; font-style: italic; line-height: 1.75; color: #404040; margin-bottom: 0.6rem; }
+.review-attr { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; color: #2e6b3e; text-transform: uppercase; }
+
+/* ── TOPICS ── */
+.topics-list { border: 1px solid #e0e0e0; }
+.topic-item { display: grid; grid-template-columns: 48px 1fr; padding: 1.5rem 1.75rem; border-bottom: 1px solid #e0e0e0; gap: 1.25rem; align-items: start; }
+.topic-item:last-child { border-bottom: none; }
+.topic-num { font-size: 0.72rem; font-weight: 700; color: #ccc; letter-spacing: 0.1em; padding-top: 3px; }
+.topic-title { font-size: 1rem; font-weight: 700; color: #000; margin-bottom: 0.35rem; line-height: 1.4; }
+.topic-desc { font-size: 0.9rem; color: #666; line-height: 1.7; }
+
+/* ── QUICK LINKS ── */
+.links-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid #e0e0e0; }
+.link-item { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; text-decoration: none; color: #404040; transition: background 0.15s; gap: 1rem; }
+.link-item:hover { background: #f9f9f9; }
+.link-item:nth-child(2n) { border-right: none; }
+.link-item:nth-last-child(-n+2) { border-bottom: none; }
+.link-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; display: block; margin-bottom: 2px; }
+.link-title { font-size: 0.9rem; font-weight: 600; color: #000; }
+.link-arrow { color: #ccc; font-size: 1.1rem; flex-shrink: 0; }
+.link-item:hover .link-arrow { color: #2e6b3e; }
+
+/* ── CONTACT BLOCK ── */
+.contact-block { border: 1px solid #e0e0e0; padding: 2rem 1.75rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.contact-text { font-size: 0.95rem; line-height: 1.8; color: #404040; max-width: 520px; }
+
+/* ── FOOTER ── */
+footer { border-top: 1px solid #e0e0e0; padding: 1.75rem 1.5rem; text-align: center; font-size: 0.8rem; color: #888; line-height: 2; }
+footer a { color: #888; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+.footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  main { padding: 1.5rem 1rem 3rem; }
+  .nav-inner { height: 48px; padding: 0 1rem; }
+  .nav-links { gap: 1rem; }
+  .hero { grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero-photo-wrap { max-width: 280px; }
+  .stats-row { grid-template-columns: 1fr; }
+  .stat { border-right: none; border-bottom: 1px solid #e0e0e0; }
+  .stat:last-child { border-bottom: none; }
+  .photos-grid { grid-template-columns: 1fr 1fr; }
+  .books-grid { grid-template-columns: repeat(3, 1fr); }
+  .links-grid { grid-template-columns: 1fr; }
+  .link-item { border-right: none; }
+  .link-item:nth-last-child(-n+2) { border-bottom: 1px solid #e0e0e0; }
+  .link-item:last-child { border-bottom: none; }
+  .topic-item { grid-template-columns: 36px 1fr; padding: 1.25rem; }
+  .contact-block { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 420px) {
+  .books-grid { grid-template-columns: repeat(2, 1fr); }
+  .photos-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="https://hifipressbooks.com">
+        <img src="../images/HIFI_v2.png" alt="HIFI Press Books">
+        <span class="nav-logo-text">HIFI Press Books</span>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#series">Series</a></li>
+      <li><a href="#topics">Topics</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-kicker">Media Kit</div>
+      <div class="hero-name">Tom<br>Sadira</div>
+      <p class="hero-tagline">Tom Sadira has spent his career in cannabis (cultivating, operating a dispensary, and working at Leafly) and along the way wrote five novels about a weed farmer who gets abducted by aliens — a premise that makes more sense the further you get into the industry.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book Tom</a>
+        <a href="https://www.amazon.com/gp/product/B07H9KVJ5D" target="_blank" class="btn-secondary">Free Book 1</a>
+      </div>
+      <div class="hero-social">
+        <a href="https://www.linkedin.com/in/tomsadira/" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.instagram.com/tomsadira/" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="../images/tom-hero.png" alt="Tom Sadira holding a book toward the sky on a desert rock formation">
+    </div>
+  </section>
+
+  <hr class="section-break">
+
+  <!-- STATS -->
+  <div class="stats-row" id="bio">
+    <div class="stat">
+      <div class="stat-number">5</div>
+      <div class="stat-label">Books in series</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">131+</div>
+      <div class="stat-label">Amazon reviews, Book 1</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">4.0★</div>
+      <div class="stat-label">Amazon rating</div>
+    </div>
+  </div>
+
+  <hr class="section-break">
+
+  <!-- BIO -->
+  <section>
+    <div class="section-label">About Tom</div>
+    <div class="bio-text">
+      <p>Tom Sadira has worked in cannabis at every level — as a cultivator, a dispensary operator, and currently at Leafly, where he works on the consumer and data side of one of the industry's most recognized platforms. That trajectory gives him an unusually complete view of how the cannabis world actually functions, from the soil up.</p>
+      <p>Alongside his industry career, Tom is the author of the <em>Far Out Chronicles</em> — a five-book sci-fi comedy series described as "Star Trek meets Cheech & Chong." The series follows cannabis grower Charlie Hong, whose crop gets stolen by aliens and who accidentally hitches a ride trying to save it. The books have been compared to Douglas Adams, Barry Hutchison's Space Team series, and Ernest Cline, and have built a dedicated following among cannabis culture and science fiction comedy fans.</p>
+      <p>Tom is based in Arizona.</p>
+    </div>
+  </section>
+
+  <hr class="section-break">
+
+  <!-- PHOTOS -->
+  <section id="photos">
+    <div class="section-label">Photos — free to use with credit</div>
+    <div class="photos-grid">
+      <div class="photo-card">
+        <img src="../images/tom-hero.png" alt="Tom Sadira on a desert rock formation holding a book toward the sky">
+        <div class="photo-caption">Arizona desert</div>
+        <a href="../images/tom-hero.png" download class="photo-download">Download</a>
+      </div>
+      <div class="photo-card">
+        <img src="../images/tom-headshot-1.png" alt="Tom Sadira headshot — sunglasses, trees">
+        <div class="photo-caption">Headshot</div>
+        <a href="../images/tom-headshot-1.png" download class="photo-download">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-break">
+
+  <!-- SERIES -->
+  <section id="series">
+    <div class="section-label">The Far Out Chronicles</div>
+    <div class="books-grid">
+      <div class="book-card-small">
+        <img src="../images/book1-cover.png" alt="The Joint of No Return">
+        <div class="book-name">The Joint of No Return</div>
+        <div class="book-amt">Free</div>
+      </div>
+      <div class="book-card-small">
+        <img src="../images/book2-cover.png" alt="Invasion of the Doobie Snatchers">
+        <div class="book-name">Invasion of the Doobie Snatchers</div>
+        <div class="book-amt">$4.20</div>
+      </div>
+      <div class="book-card-small">
+        <img src="../images/book3-cover.png" alt="For the Thrill of the Blunt">
+        <div class="book-name">For the Thrill of the Blunt</div>
+        <div class="book-amt">$4.20</div>
+      </div>
+      <div class="book-card-small">
+        <img src="../images/book4-cover.png" alt="Silence of the Schwag">
+        <div class="book-name">Silence of the Schwag</div>
+        <div class="book-amt">$4.20</div>
+      </div>
+      <div class="book-card-small">
+        <img src="../images/book5-cover.png" alt="Murder on the Pineapple Express">
+        <div class="book-name">Murder on the Pineapple Express</div>
+        <div class="book-amt">$4.20</div>
+      </div>
+    </div>
+    <p class="omnibus-note">All five books also available as the <a href="https://www.amazon.com/dp/B0CTSZC653" target="_blank">Far Out Five Mega-Omnibus</a> — free on Kindle Unlimited.</p>
+  </section>
+
+  <hr class="section-break">
+
+  <!-- ALIEN REVIEWS -->
+  <section>
+    <div class="section-label">Interplanetary praise</div>
+    <div class="reviews-stack">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Tom Sadira's Far Out Chronicles has restored the galaxy's faith in Earth's ability to produce fresh and riveting science fiction. Without it, the Council would have demolished that dirty, backwater planet long ago."</div>
+        <div class="review-attr">— Emperor Izzug Brutag, 713th Galactic Council</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"The fast-paced, imaginative storytelling really helped get things moving during the weeks-long excretion rituals of Alpha Orionis, if ya know what I mean."</div>
+        <div class="review-attr">— Blek Ylp, Custodial Engineer, Betelgeuse System</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"The Far Out Chronicles kept the G'wark species distracted long enough for us to complete our weapon and wipe out their homeworld. Thanks Earthling!"</div>
+        <div class="review-attr">— Commander Zrauvvurbu, Essari Rebellion</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"The hivemind of Pollux Major loved the Far Out Chronicles so much that we used our forbidden time-jump technology to travel forward in time to get our hands on the complete works. It was totally worth the risk of temporal paradox."</div>
+        <div class="review-attr">— The Hivemind of Pollux Major</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-break">
+
+  <!-- TOPICS -->
+  <section id="topics">
+    <div class="section-label">Episode angles</div>
+    <div class="topics-list">
+      <div class="topic-item">
+        <div class="topic-num">01</div>
+        <div>
+          <div class="topic-title">The cannabis industry from the inside out</div>
+          <div class="topic-desc">Tom has worked in cannabis at every level — cultivation, retail, and now a major consumer platform. He can speak to what the data actually shows, what dispensary culture looks like in practice, and where the gap between industry narrative and consumer reality tends to widen.</div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-num">02</div>
+        <div>
+          <div class="topic-title">Writing comedy sci-fi from real cannabis experience</div>
+          <div class="topic-desc">The Far Out Chronicles grew directly out of Tom's background in the industry. The books are comedic science fiction, but the grower's experience at their core is real. Tom can discuss what it means to build a creative body of work around a profession most people encounter only as a punchline, and why absurdist comedy has always been a natural companion to cannabis culture.</div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-num">03</div>
+        <div>
+          <div class="topic-title">The cannabis industry state by state</div>
+          <div class="topic-desc">Legalization, market evolution, what's actually happening on the retail and brand side, and where the industry is heading. Tom has watched this unfold from the inside across multiple roles and has informed opinions about where it's been and where it's going.</div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-num">04</div>
+        <div>
+          <div class="topic-title">Building a creative career alongside a demanding industry job</div>
+          <div class="topic-desc">Tom wrote five novels while working full-time in cannabis. He can speak to the practicalities and discipline that requires, and the unexpected ways those two worlds inform each other.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-break">
+
+  <!-- QUICK LINKS -->
+  <section>
+    <div class="section-label">Quick links</div>
+    <div class="links-grid">
+      <a href="https://www.amazon.com/gp/product/B07H9KVJ5D" target="_blank" class="link-item">
+        <div>
+          <span class="link-label">Free download</span>
+          <span class="link-title">Book 1 — The Joint of No Return</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://www.amazon.com/dp/B0CTSZC653" target="_blank" class="link-item">
+        <div>
+          <span class="link-label">Kindle Unlimited</span>
+          <span class="link-title">Far Out Five Mega-Omnibus</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://hifipressbooks.com" target="_blank" class="link-item">
+        <div>
+          <span class="link-label">Publisher site</span>
+          <span class="link-title">hifipressbooks.com</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://www.amazon.com/stores/Tom-Sadira/author/B07H82N5P4" target="_blank" class="link-item">
+        <div>
+          <span class="link-label">All books</span>
+          <span class="link-title">Amazon Author Page</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://www.linkedin.com/in/tomsadira/" target="_blank" class="link-item">
+        <div>
+          <span class="link-label">Professional</span>
+          <span class="link-title">LinkedIn</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://www.instagram.com/tomsadira/" target="_blank" class="link-item">
+        <div>
+          <span class="link-label">Social</span>
+          <span class="link-title">Instagram</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <hr class="section-break">
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Book Tom</div>
+    <div class="contact-block">
+      <p class="contact-text">Tom is available for podcast interviews, cannabis industry panels, and author appearances. He comes prepared, speaks plainly, and knows the industry from the inside out. Reach out via the HIFI Press contact page.</p>
+      <a href="https://hifipressbooks.com/contact.html" class="btn-primary">Get in touch →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://hifipressbooks.com">Home</a>
+    <a href="https://hifipressbooks.com/contact.html">Contact</a>
+    <a href="https://hifipressbooks.com/terms-of-service">Terms</a>
+    <a href="https://hifipressbooks.com/privacy-policy">Privacy</a>
+  </div>
+  <div style="margin-top:0.5rem">© 2025 HIFI Press LLC · Arizona, USA</div>
+</footer>
+
+</body>
+</html>
