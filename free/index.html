@@ -27,6 +27,7 @@
     .nav-links { list-style: none; display: flex; gap: 2rem; }
     .nav-links a:hover { color: #000; }
 
+    #novel, #stories { scroll-margin-top: 72px; }
     main { max-width: 960px; margin: 0 auto; padding: 2.5rem 2rem 4rem; }
     .green { color: #2e6b3e; }
 
@@ -53,11 +54,14 @@
     .store-goo { background: #fff; color: #202124; border: 1.5px solid #c8c8c8; }
     .store-goo:hover { background: #f5f5f5; }
     .store svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .stores-logos { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 0.9rem; }
+    .stores-logos a { display: inline-flex; align-items: center; }
+    .stores-logos img { height: clamp(50px, 6.5vw, 58px); width: auto; display: block; border-radius: 5px; }
     .free-tag { display: inline-block; background: #2e6b3e; color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.55rem; border-radius: 3px; vertical-align: middle; }
 
     /* FEATURED NOVEL */
     .feature { display: grid; grid-template-columns: 240px 1fr; gap: 2.25rem; align-items: start; }
-    .feature-cover img, .card-cover img, .coll-cover img { border-radius: 4px; box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
+    .card-cover img, .coll-cover img { border-radius: 4px; box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
     .book-title { font-size: clamp(1.3rem, 3vw, 1.75rem); font-weight: 700; line-height: 1.25; color: #2e6b3e; margin: 0.4rem 0 0.25rem; }
     .book-title a { text-decoration: none; font-style: italic; }
     .book-series { font-style: italic; color: #666; font-size: 0.95rem; margin-bottom: 0.75rem; }
@@ -73,7 +77,8 @@
     .card-cover { display: block; max-width: 200px; margin: 0 auto 1rem; width: 100%; }
     .card .book-title { font-size: 1.2rem; margin-top: 0; }
     .card .genre { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 0.4rem; }
-    .card p.desc { font-size: 0.95rem; flex-grow: 1; }
+    .card .desc { font-size: 0.95rem; flex-grow: 1; }
+    .card div.desc p { margin-bottom: 0.6rem; }
 
     /* COLLECTION PITCH */
     .collection { background: #f4f7f4; border: 1px solid #dbe6dd; border-radius: 10px; padding: 2.25rem; display: grid; grid-template-columns: 200px 1fr; gap: 2rem; align-items: center; }
@@ -85,7 +90,7 @@
     /* SERIES STRIP */
     .series { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
     .series a { text-decoration: none; text-align: center; font-size: 0.85rem; font-weight: 700; color: #404040; line-height: 1.3; }
-    .series img { border-radius: 4px; box-shadow: 0 4px 14px rgba(0,0,0,0.15); margin-bottom: 0.5rem; transition: transform .15s; }
+    .series img { margin-bottom: 0.5rem; transition: transform .15s; }
     .series a:hover img { transform: translateY(-3px); }
 
     /* NEWSLETTER (matches homepage) */
@@ -117,7 +122,8 @@
       .collection { padding: 1.5rem 1.25rem; }
       .series { grid-template-columns: repeat(2, 1fr); }
       .section-break { margin: 2.25rem 0; }
-      .store { flex: 1 1 140px; justify-content: center; }
+      .stores-logos { gap: 6px; }
+      .stores-logos img { height: 50px; }
     }
   </style>
 </head>
@@ -165,13 +171,16 @@
       <p class="pull-quote">"Star Trek meets Cheech &amp; Chong!"</p>
       <div class="blurb">
         <p class="book-hook">Charlie Hong is on the run from both sides of the law.</p>
-        <p>His last-ditch weed grow is about to pay off when a light in the sky steals the whole crop. Charlie hitches a ride with one of his plants and wakes up aboard the <em>Starseed</em>, a living spaceship trapped in Earth's orbit by evil Reptilians. Saving it is now his problem. First, though: does he have time to light one up?</p>
+        <p>When a bright light in the sky steals his last-chance weed crop, Charlie hitches a ride with one of his plants and lands aboard the <em>Starseed</em>, a living spaceship trapped in Earth's orbit by Reptilian overlords. Saving it is now his problem. First, though: does he have time to light one up?</p>
       </div>
-      <div class="stores">
-        <a class="store store-amz" href="https://www.amazon.com/dp/B07BHQ1RSH" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4zm2 2v11a1 1 0 0 0 1 1h10V7a1 1 0 0 0-1-1H6z"/></svg>Free on Kindle</a>
-        <a class="store store-goo" href="https://play.google.com/store/books/details?id=vrloDwAAQBAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M4 3l10 9-10 9z"/><path fill="#fbbc04" d="M14 12l3-3 4 2.3c.9.5.9 1 0 1.4L17 15z"/><path fill="#4285f4" d="M4 3l13 6-3 3z"/><path fill="#ea4335" d="M4 21l10-9 3 3z"/></svg>Free on Google Play</a>
-      </div>
-      <p class="also">Also on <a href="https://www.barnesandnoble.com/w/the-joint-of-no-return-tom-sadira/1129252862?ean=2940161701720" target="_blank" rel="noopener">Nook</a>, <a href="https://itunes.apple.com/us/book/the-joint-of-no-return/id1434230367" target="_blank" rel="noopener">Apple Books</a> &amp; <a href="https://www.kobo.com/us/en/ebook/the-joint-of-no-return" target="_blank" rel="noopener">Kobo</a>. Audiobook &amp; paperback <a href="https://www.amazon.com/dp/B07BHQ1RSH" target="_blank" rel="noopener">on Amazon</a>.</p>
+      <div class="stores-logos">
+          <a href="https://www.amazon.com/dp/B07BHQ1RSH" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+          <a href="https://play.google.com/store/books/details?id=vrloDwAAQBAJ" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/google.png" alt="Google Play"></a>
+          <a href="https://www.barnesandnoble.com/w/the-joint-of-no-return-tom-sadira/1129252862?ean=2940161701720" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/nook.png" alt="Nook"></a>
+          <a href="https://itunes.apple.com/us/book/the-joint-of-no-return/id1434230367" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/Apple-Books-Logo.png" alt="Apple Books"></a>
+          <a href="https://www.kobo.com/us/en/ebook/the-joint-of-no-return" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/Kobo-80-Rakuten.png" alt="Kobo"></a>
+        </div>
+      <p class="also">Audiobook &amp; paperback <a href="https://www.amazon.com/dp/B07BHQ1RSH" target="_blank" rel="noopener">on Amazon</a>.</p>
     </div>
   </section>
 
@@ -181,7 +190,7 @@
   <section id="stories">
     <div class="section-head">
       <h2>5 free short stories</h2>
-      <p>Quick, weird reads from my collection <em>A Few Before We're Through</em>. Horror, fantasy, sci-fi and satire, each one finishable before your coffee gets cold.</p>
+      <p>Quick reads from my collection <em>A Few Before We're Through</em>. Horror, fantasy, sci-fi and satire, each one finishable before your coffee gets cold.</p>
     </div>
 
     <div class="grid">
@@ -192,10 +201,10 @@
         <p class="genre">Sci-fi</p>
         <p class="book-title"><a href="https://www.amazon.com/dp/B0DWPPYKK9" target="_blank" rel="noopener">Red Awakening</a></p>
         <p class="book-series">A Martian Manifesto</p>
-        <p class="desc">Mars has woken up, and it would like Earth to stay the hell away. A formal declaration from the red planet's original residents, who have had just about enough of your rovers.</p>
-        <div class="stores">
-          <a class="store store-amz" href="https://www.amazon.com/dp/B0DWPPYKK9" target="_blank" rel="noopener">Kindle</a>
-          <a class="store store-goo" href="https://play.google.com/store/books/details?id=pNRFEQAAQBAJ" target="_blank" rel="noopener">Google Play</a>
+        <p class="desc">Mars just woke up, and it is not happy to see you. Its ancient residents have a message for Earth: any ship that lands is theirs, and any visitor who gets hostile gets hurled back into space, aimed roughly at home.</p>
+        <div class="stores-logos">
+          <a href="https://www.amazon.com/dp/B0DWPPYKK9" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+          <a href="https://play.google.com/store/books/details?id=pNRFEQAAQBAJ" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/google.png" alt="Google Play"></a>
         </div>
       </article>
 
@@ -206,9 +215,9 @@
         <p class="book-title"><a href="https://www.amazon.com/dp/B0DQVV3LKV" target="_blank" rel="noopener">Throne of Jest</a></p>
         <p class="book-series">He Whom Laugheth Last</p>
         <p class="desc">A troupe of traveling actors is summoned by a sadistic king to answer for their wildly popular, wildly treasonous plays. Their only shot at surviving the morrow: make the tyrant laugh.</p>
-        <div class="stores">
-          <a class="store store-amz" href="https://www.amazon.com/dp/B0DQVV3LKV" target="_blank" rel="noopener">Kindle</a>
-          <a class="store store-goo" href="https://play.google.com/store/books/details?id=C-w4EQAAQBAJ" target="_blank" rel="noopener">Google Play</a>
+        <div class="stores-logos">
+          <a href="https://www.amazon.com/dp/B0DQVV3LKV" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+          <a href="https://play.google.com/store/books/details?id=C-w4EQAAQBAJ" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/google.png" alt="Google Play"></a>
         </div>
       </article>
 
@@ -219,9 +228,9 @@
         <p class="book-title"><a href="https://www.amazon.com/dp/B0DP4CWKXM" target="_blank" rel="noopener">DadQuest</a></p>
         <p class="book-series">A Fantasy-Fueled Fiasco</p>
         <p class="desc">A homeschooling dad turns his kids' lessons into a live-action RPG, then accidentally brings home a cursed book full of very real minions. For the record: the house did <em>not</em> burn down.</p>
-        <div class="stores">
-          <a class="store store-amz" href="https://www.amazon.com/dp/B0DP4CWKXM" target="_blank" rel="noopener">Kindle</a>
-          <a class="store store-goo" href="https://play.google.com/store/books/details?id=52g0EQAAQBAJ" target="_blank" rel="noopener">Google Play</a>
+        <div class="stores-logos">
+          <a href="https://www.amazon.com/dp/B0DP4CWKXM" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+          <a href="https://play.google.com/store/books/details?id=52g0EQAAQBAJ" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/google.png" alt="Google Play"></a>
         </div>
       </article>
 
@@ -232,9 +241,9 @@
         <p class="book-title"><a href="https://www.amazon.com/dp/B0BN9GS7SR" target="_blank" rel="noopener">The Christmas Variant</a></p>
         <p class="book-series">A Short Nightmare</p>
         <p class="desc">A human virus reaches the North Pole and mutates in elf blood. On Christmas Eve, Santa and Mrs. Claus have to contain it before the sleigh spreads something worse than cheer.</p>
-        <div class="stores">
-          <a class="store store-amz" href="https://www.amazon.com/dp/B0BN9GS7SR" target="_blank" rel="noopener">Kindle</a>
-          <a class="store store-goo" href="https://play.google.com/store/books/details?id=yMmdEAAAQBAJ" target="_blank" rel="noopener">Google Play</a>
+        <div class="stores-logos">
+          <a href="https://www.amazon.com/dp/B0BN9GS7SR" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+          <a href="https://play.google.com/store/books/details?id=yMmdEAAAQBAJ" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/google.png" alt="Google Play"></a>
         </div>
       </article>
 
@@ -244,10 +253,10 @@
         <p class="genre">Southwest horror</p>
         <p class="book-title"><a href="https://www.amazon.com/dp/B0DS9FK85H" target="_blank" rel="noopener">Blood Emoji</a></p>
         <p class="book-series">A Hexed Text</p>
-        <p class="desc">Bodies in a locked interrogation room in Bisbee, Arizona. More in an irrigation ditch. A deputy who won't talk about the donkey. And a witch who delivers her curses by SMS.</p>
-        <div class="stores">
-          <a class="store store-amz" href="https://www.amazon.com/dp/B0DS9FK85H" target="_blank" rel="noopener">Kindle</a>
-          <a class="store store-goo" href="https://play.google.com/store/books/details?id=8AI-EQAAQBAJ" target="_blank" rel="noopener">Google Play</a>
+        <p class="desc">Bisbee, Arizona: bodies in a locked interrogation room at the sheriff's office, two more floating in an irrigation ditch, and the deputy who found them won't say a word about the donkey until he talks to his lawyer.</p>
+        <div class="stores-logos">
+          <a href="https://www.amazon.com/dp/B0DS9FK85H" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+          <a href="https://play.google.com/store/books/details?id=8AI-EQAAQBAJ" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/google.png" alt="Google Play"></a>
         </div>
       </article>
 
@@ -271,10 +280,10 @@
         <li>A vengeful witch slinging curses via text</li>
         <li>…and the end of the world, played mostly for laughs</li>
       </ul>
-      <div class="stores">
-        <a class="store store-amz" href="https://www.amazon.com/dp/B0DP1GWJQP" target="_blank" rel="noopener">Get it on Kindle</a>
-        <a class="store store-goo" href="https://play.google.com/store/books/details?id=kS51EQAAQBAJ" target="_blank" rel="noopener">Get it on Google Play</a>
-      </div>
+      <div class="stores-logos">
+          <a href="https://www.amazon.com/dp/B0DP1GWJQP" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/amazon-kindle-logo.png" alt="Amazon Kindle"></a>
+          <a href="https://play.google.com/store/books/details?id=kS51EQAAQBAJ" target="_blank" rel="noopener"><img src="https://hifipressbooks.com/images/google.png" alt="Google Play"></a>
+        </div>
     </div>
   </section>
 
